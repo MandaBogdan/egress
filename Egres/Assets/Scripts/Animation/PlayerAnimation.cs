@@ -12,6 +12,7 @@ public class PlayerAnimation : MonoBehaviour
     private Animator attackUpAnimator;
     private Animator attackDownAnimator;
     private Rigidbody2D body;
+    private Knockback knockback;
 
     private bool isRight = true;
     private bool isReady = true;
@@ -27,6 +28,7 @@ public class PlayerAnimation : MonoBehaviour
         attackUpAnimator = transform.Find("AttackUp").GetComponent<Animator>();
         attackDownAnimator = transform.Find("AttackDown").GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
+        knockback = transform.Find("Attack").GetComponent<Knockback>();
     }
 
     void Update()
@@ -109,6 +111,7 @@ public class PlayerAnimation : MonoBehaviour
         scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+        knockback.knockback = new Vector2(knockback.knockback.x * -1, 0);
         isRight = !isRight;
     }
 

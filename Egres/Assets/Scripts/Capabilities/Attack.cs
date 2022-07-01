@@ -8,13 +8,12 @@ public class Attack : MonoBehaviour
     [SerializeField] private float attackDuration = 0.2f;
     [SerializeField] private float attackCooldown = 1;
 
-    public bool isReady = true;
-
     private Rigidbody2D body;
     private Collider2D attackCollider;
     private Collider2D attackDownCollider;
     private Collider2D attackUpCollider;
 
+    private bool isReady = true;
     private bool attack;
     private float vertical;
 
@@ -56,6 +55,7 @@ public class Attack : MonoBehaviour
     {
         isReady = false;
         collider.enabled = true;
+        body.velocity = new Vector2(0, body.velocity.y);
         yield return new WaitForSeconds(attackDuration);
         collider.enabled = false;
         yield return new WaitForSeconds(attackCooldown);

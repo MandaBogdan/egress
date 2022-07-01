@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 724387332140620382}
   - component: {fileID: 1419840429071275115}
   - component: {fileID: 1419840429071275109}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,8 +329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 11400000, guid: c2f57a58df6b78842bd459b618265428, type: 2}
   attackDuration: 0.2
-  attackCooldown: 1
-  isReady: 1
+  attackCooldown: 0.5
 --- !u!114 &1419840429071275115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,6 +368,7 @@ GameObject:
   - component: {fileID: 2592189482964956098}
   - component: {fileID: 3397008944062445387}
   - component: {fileID: 1787544643285728665}
+  - component: {fileID: 7969604987158415969}
   m_Layer: 0
   m_Name: AttackDown
   m_TagString: Untagged
@@ -476,6 +476,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7969604987158415969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2877963071558953196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff8dbac7af050c40b7a4aee6628762f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiplyer: 20
+  knockback: {x: 0, y: -1}
 --- !u!1 &3426900953210283091
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +502,7 @@ GameObject:
   - component: {fileID: 917712266927573205}
   - component: {fileID: 5555058303671765379}
   - component: {fileID: 2863929532294389014}
+  - component: {fileID: 8774774893444209779}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Untagged
@@ -595,6 +610,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8774774893444209779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3426900953210283091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff8dbac7af050c40b7a4aee6628762f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiplyer: 3
+  knockback: {x: 1, y: 0}
 --- !u!1 &6507422730856256558
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,6 +636,7 @@ GameObject:
   - component: {fileID: 7241439172395513354}
   - component: {fileID: 6142088625541498120}
   - component: {fileID: 191006292973578894}
+  - component: {fileID: 1014354551881905799}
   m_Layer: 0
   m_Name: AttackUp
   m_TagString: Untagged
@@ -714,3 +744,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1014354551881905799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6507422730856256558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff8dbac7af050c40b7a4aee6628762f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiplyer: 3
+  knockback: {x: 0, y: 1}
