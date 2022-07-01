@@ -20,14 +20,12 @@ public class Move : MonoBehaviour
     private float acceleration;
     private bool onGround;
 
-    // Start is called before the first frame update
     void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         ground = GetComponent<Ground>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         direction.x = input.RetrieveMoveInput();

@@ -57,7 +57,7 @@ public class PlayerAnimation : MonoBehaviour
                 else
                     animator.Play("attack");
             }
-        } 
+        }
 
         if (body.velocity.y > 0)
             animator.SetBool("isJumping", true);
