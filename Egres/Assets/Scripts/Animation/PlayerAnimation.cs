@@ -8,6 +8,9 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] private float attackCooldown = 1;
 
     private Animator animator;
+    private Animator attackAnimator;
+    private Animator attackUpAnimator;
+    private Animator attackDownAnimator;
     private Rigidbody2D body;
 
     private bool isRight = true;
@@ -20,6 +23,9 @@ public class PlayerAnimation : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        attackAnimator = transform.Find("Attack").GetComponent<Animator>();
+        attackUpAnimator = transform.Find("AttackUp").GetComponent<Animator>();
+        attackDownAnimator = transform.Find("AttackDown").GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
     }
 
@@ -44,18 +50,33 @@ public class PlayerAnimation : MonoBehaviour
             if (body.velocity.y != 0)
             {
                 if (vertical == 0)
+                {
                     animator.Play("attack-air");
+                    attackAnimator.Play("attack");
+                }
                 else if (vertical == 1)
+                {
                     animator.Play("attack-up-air");
+                    attackUpAnimator.Play("attack");
+                }                 
                 else
+                {
                     animator.Play("attack-down");
+                    attackDownAnimator.Play("attack");
+                }            
             }
             else
             {
                 if (vertical == 1)
+                {
                     animator.Play("attack-up");
+                    attackUpAnimator.Play("attack");
+                }
                 else
+                {
                     animator.Play("attack");
+                    attackAnimator.Play("attack");
+                }
             }
         }
 
