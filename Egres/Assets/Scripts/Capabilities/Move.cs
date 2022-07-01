@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
+    [SerializeField] private InputController input = null;
     [SerializeField, Range(0f, 100f)] private float maxSpeed = 4f;
     [SerializeField, Range(0f, 100f)] private float maxAcceleration = 35f;
     [SerializeField, Range(0f, 100f)] private float maxAirAcceleration = 20f;
 
-    private Controller controller;
+
     private Vector2 direction;
     private Vector2 desiredVelocity;
     private Vector2 velocity;
@@ -24,13 +25,12 @@ public class Move : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         ground = GetComponent<Ground>();
-        controller = GetComponent<Controller>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        direction.x = controller.input.RetrieveMoveInput();
+        direction.x = input.RetrieveMoveInput();
         desiredVelocity = new Vector2(direction.x, 0) * Mathf.Max(maxSpeed - ground.GetFriction(), 0f);
     }
 
