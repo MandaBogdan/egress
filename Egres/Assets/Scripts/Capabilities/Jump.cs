@@ -20,7 +20,6 @@ public class Jump : MonoBehaviour
     private bool desiredJump;
     private bool onGround;
 
-    // Start is called before the first frame update
     void Awake()
     {
         body = GetComponent<Rigidbody2D>();
@@ -28,7 +27,6 @@ public class Jump : MonoBehaviour
         defaultGravityScale = 1f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         desiredJump |= input.RetrieveJumpInput();

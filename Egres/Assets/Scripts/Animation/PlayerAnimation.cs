@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    public InputController input = null;
+    [SerializeField] private InputController input = null;
+    [SerializeField] private float attackCooldown = 1;
 
     private Animator animator;
     private Rigidbody2D body;
 
     private bool isRight = true;
+    private bool isReady = true;
     private float horizontal;
     private float vertical;
     private bool attack;
@@ -36,8 +38,9 @@ public class PlayerAnimation : MonoBehaviour
             Flip();
         }
 
-        if(attack == true)
+        if(attack && isReady)
         {
+            StartCoroutine(AttackCooldown());
             if (body.velocity.y != 0)
             {
                 if (vertical == 0)
@@ -86,5 +89,12 @@ public class PlayerAnimation : MonoBehaviour
         scale.x *= -1;
         transform.localScale = scale;
         isRight = !isRight;
+    }
+
+    IEnumerator AttackCooldown()
+    {
+        isReady = false;
+        yield return new WaitForSeconds(attackCooldown);
+        isReady = true;
     }
 }
