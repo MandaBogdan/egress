@@ -6006,8 +6006,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148775159}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 10.01, y: 6.35, z: 0}
   m_LocalScale: {x: 16.915417, y: 17.0945, z: 1}
+=======
+  m_LocalPosition: {x: -2.07, y: 3.15, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+>>>>>>> Stashed changes
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -7389,9 +7394,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f332bf727586f49bffc66864b0c2c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   maxSpeed: 4
   maxAcceleration: 16
   maxAirAcceleration: 50
+=======
+  input: {fileID: 11400000, guid: c2f57a58df6b78842bd459b618265428, type: 2}
+  maxSpeed: 5
+  maxAcceleration: 8
+  maxAirAcceleration: 45.2
+>>>>>>> Stashed changes
 --- !u!96 &1569567220
 TrailRenderer:
   serializedVersion: 2
@@ -7597,7 +7609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569567217}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4975247, y: 1.8835983, z: -0.5672575}
+  m_LocalPosition: {x: -2.4975247, y: -0.66, z: -0.5672575}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7637,12 +7649,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2013ca363bf2343be00d4dc8e48333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   jumpHeight: 6
   maxAirJumps: 0
   downwardMovementMultiplier: 3
   upwardMovementMultiplier: 3
   coyoteTime: 0.2
   jumpBufferTime: 0.2
+=======
+  input: {fileID: 11400000, guid: c2f57a58df6b78842bd459b618265428, type: 2}
+  jumpHeight: 8
+  maxAirJumps: 0
+  downwardMovementMultiplier: 3
+  upwardMovementMultiplier: 4
+>>>>>>> Stashed changes
 --- !u!95 &1569567227
 Animator:
   serializedVersion: 3
@@ -7671,6 +7691,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1569567217}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: 3803030c73c3bd84cbad7d457105b494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -7885,3 +7906,9 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_SpriteID: 
+=======
+  m_Script: {fileID: 11500000, guid: 410019e5e38cc1745ab4d51f5d05ebf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 11400000, guid: c2f57a58df6b78842bd459b618265428, type: 2}
+>>>>>>> Stashed changes

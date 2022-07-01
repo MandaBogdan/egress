@@ -17,4 +17,12 @@ public class AIController : InputController
     public override bool RetrieveJumpHoldInput(){
         return false;
     }
+
+    public override float RetrieveLookInput(){
+        return 1f;
+    }
+
+    public override bool RetrieveAttackInput(){
+        return false;
+    }
 }
