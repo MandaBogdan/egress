@@ -92,7 +92,7 @@ public class PlayerAnimation : MonoBehaviour
         else
             animator.SetBool("isFalling", false);
 
-        if (body.velocity.x != 0)
+        if (horizontal != 0)
             animator.SetBool("isRunning", true);
         else
             animator.SetBool("isRunning", false);
