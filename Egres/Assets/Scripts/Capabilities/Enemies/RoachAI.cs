@@ -24,11 +24,11 @@ public class RoachAI : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.contactCount < 2)
-        {
-            StartCoroutine(FlipDelay());
-            return;
-        }
+        //if(collision.contactCount < 2)
+        //{
+        //    StartCoroutine(FlipDelay());
+        //    return;
+        //}
 
         if (isReady && (collision.GetContact(1).point.x - collision.GetContact(0).point.x) < 3.9)
             StartCoroutine(FlipDelay());

@@ -17,15 +17,15 @@ public class FlyAI : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(isReady && collision.contactCount == 1)//collision.GetContact(0).point.x != transform.position.x)
-            StartCoroutine(FlipDelay());
+        if(isReady && collision.GetContact(0).point.x != transform.position.x)
+            StartCoroutine(FlipDelay()); 
         else
-            StartCoroutine(FlipDelayY());
+            StartCoroutine(FlipDelayY());  
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (isReady && collision.contactCount == 1)//collision.GetContact(0).point.x != transform.position.x)
+        if (isReady && collision.GetContact(0).point.x != transform.position.x)
             StartCoroutine(FlipDelay());
         else
             StartCoroutine(FlipDelayY());
